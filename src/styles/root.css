@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply py-3 text-5xl font-semibold;
+  }
+  h2 {
+    @apply py-2 text-2xl font-semibold;
+  }
+  ul {
+    @apply list-disc pl-6 marker:text-gray-400;
+  }
+  li {
+    @apply py-1 pl-2 text-gray-400;
+  }
+  li a {
+    @apply border-sky-600 bg-gradient-to-r
+    from-sky-500 to-indigo-500 bg-clip-text
+      font-medium text-sky-500 hover:border-b-2 hover:text-transparent;
+  }
+  code {
+    @apply bg-gray-100 px-1 text-sm text-gray-500;
+  }
+}
+
+@layer components {
+  .social-icon {
+    @apply fill-gray-400 hover:fill-sky-500;
+  }
+}
+
+@layer utilities {
+  .text-rainbow {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      to right,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    );
+  }
+}

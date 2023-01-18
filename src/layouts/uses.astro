@@ -1,0 +1,17 @@
+---
+import MainLayout from "./main.astro";
+
+const { content } = Astro.props;
+---
+
+<MainLayout content={content}>
+  <slot />
+</MainLayout>
+
+<script>
+  const anchors = document.querySelectorAll("a");
+  anchors.forEach((a) => {
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener noreferrer");
+  });
+</script>

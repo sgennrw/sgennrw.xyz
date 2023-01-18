@@ -1,24 +1,47 @@
 ---
 // Component Imports
-import Button from '../components/Button.astro';
+import MainLayout from "../layouts/main.astro";
+import Card from "../components/Card.astro";
+import SocialLink from "../components/SocialLink.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+
+const PAGE_TITLE = "sgennrw";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
-
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+<MainLayout content={{ title: PAGE_TITLE }}>
+  <div class="grid h-screen place-items-center content-center px-4">
+    <Card>
+      <div
+        class="mx-4 mt-2 h-52 w-auto flex-none overflow-hidden bg-[url('/assets/profile-img.jpeg')] bg-cover bg-center text-center lg:mb-4 lg:h-auto lg:w-48"
+        title={PAGE_TITLE}
+      >
+      </div>
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <div class="mb-5">
+          <p class="flex items-center text-base text-gray-400">
+            👩‍💻✏️📚☕🌙🐱🏳️‍🌈
+          </p>
+          <div class="mb-2 text-xl font-bold text-gray-900">
+            Salisa Cheawcharnthong
+          </div>
+          <p class="text-base text-gray-700">
+            A Software Engineer, a human, a cat person, a coffeeholic, a
+            homebody, a night owl pretending to be an early bird, a code
+            breaker, and a problem
+            <i class="text-gray-400 line-through">solver</i> creator.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <SocialLink icon={"medium"} href={"https://medium.com/@salisa.cct"} />
+          <SocialLink
+            icon={"linkedin"}
+            href={"https://www.linkedin.com/in/salisa-cct/"}
+          />
+          <SocialLink icon={"twitter"} href={"https://twitter.com/sgennrw"} />
+        </div>
+      </div>
+    </Card>
+  </div>
+</MainLayout>

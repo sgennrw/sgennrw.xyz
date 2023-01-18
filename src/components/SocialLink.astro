@@ -1,0 +1,19 @@
+---
+export interface Props {
+  icon: string;
+  href: string;
+}
+
+const { icon, href } = Astro.props as Props;
+const { default: innerHTML } = await import(`../svgs/${icon}.svg?raw`);
+---
+
+<a
+  href={href}
+  role="button"
+  aria-label={icon}
+  target="_blank"
+  rel="noreferrer noopener"
+>
+  <Fragment set:html={innerHTML} />
+</a>
