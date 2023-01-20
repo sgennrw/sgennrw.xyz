@@ -1,0 +1,42 @@
+<nav
+  id="navbar"
+  class="sticky top-0 flex h-16 items-center justify-end gap-10 bg-white px-10 transition-all delay-300 sm:px-20"
+>
+  <a href="/" class="flex gap-1">
+    <img
+      src="/favicon.png"
+      alt="salisa c"
+      width="16"
+      height="16"
+      class="object-contain"
+    />
+    salisa c
+  </a>
+  <a href="/uses">/uses</a>
+</nav>
+
+<script>
+  const handleNavbarOnScroll = () => {
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      const navbar = document.getElementById("navbar");
+      const isScrollUp = prevScrollpos > currentScrollPos;
+      if (isScrollUp) {
+        navbar.style.top = "0";
+        if (currentScrollPos > 48) {
+          navbar.style.opacity = "0.8";
+        } else {
+          navbar.style.opacity = "1";
+        }
+      } else {
+        navbar.style.top = "-4rem";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  };
+  handleNavbarOnScroll();
+</script>
+
+<style></style>

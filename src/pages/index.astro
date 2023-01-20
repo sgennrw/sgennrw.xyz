@@ -11,10 +11,10 @@ const PAGE_TITLE = "sgennrw";
 ---
 
 <MainLayout content={{ title: PAGE_TITLE }}>
-  <div class="grid h-screen place-items-center content-center px-4">
+  <div class="grid h-[calc(100vh-4rem)] place-items-center content-center px-4">
     <Card>
       <div
-        class="mx-4 mt-2 h-52 w-auto flex-none overflow-hidden bg-[url('/assets/profile-img.jpeg')] bg-cover bg-center text-center lg:mb-4 lg:h-auto lg:w-48"
+        class="m-4 h-52 w-auto flex-none overflow-hidden bg-[url('/assets/profile-img.jpg')] bg-[length:250px_250px] bg-center bg-no-repeat text-center lg:h-auto lg:w-48 lg:bg-[length:200px_200px]"
         title={PAGE_TITLE}
       >
       </div>
@@ -34,6 +34,7 @@ const PAGE_TITLE = "sgennrw";
           </p>
         </div>
         <div class="flex items-center gap-2">
+          <SocialLink icon={"github"} href={"https://github.com/sgennrw"} />
           <SocialLink icon={"medium"} href={"https://medium.com/@salisa.cct"} />
           <SocialLink
             icon={"linkedin"}

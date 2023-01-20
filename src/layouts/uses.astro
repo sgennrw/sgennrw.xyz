@@ -9,9 +9,10 @@ const { content } = Astro.props;
 </MainLayout>
 
 <script>
-  const anchors = document.querySelectorAll("a");
+  const anchors = document.querySelectorAll("a[href*='://']");
   anchors.forEach((a) => {
     a.setAttribute("target", "_blank");
     a.setAttribute("rel", "noopener noreferrer");
+    a.classList.add("link-fancy");
   });
 </script>

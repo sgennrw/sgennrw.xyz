@@ -1,16 +1,16 @@
 ---
+import MetaTags from "../components/core/MetaTags.astro";
+import Navbar from "../components/core/Navbar.astro";
 import "../styles/root.css";
 const { content } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>salisa c | {content.title}</title>
+    <MetaTags content={content} />
   </head>
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>
