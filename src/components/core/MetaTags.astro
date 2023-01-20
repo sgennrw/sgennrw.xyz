@@ -1,4 +1,8 @@
 ---
+import AnalyticMeta from "./AnalyticMeta.astro";
+import { config } from "../../config";
+const { analyticId } = config;
+
 export interface Props {
   content: {
     title: string;
@@ -14,15 +18,4 @@ const { content } = Astro.props as Props;
 
 <title>salisa c | {content.title}</title>
 
-<script
-  type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id=G-2GV0VK8Z5Y"
-></script>
-<script type="text/partytown">
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-2GV0VK8Z5Y");
-</script>
+{analyticId && <AnalyticMeta id={analyticId} />}
