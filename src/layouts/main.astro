@@ -1,13 +1,15 @@
 ---
-import MetaTags from "../components/core/MetaTags.astro";
+import MetaTags, {
+  Props as MetaProps,
+} from "../components/core/MetaTags.astro";
 import Navbar from "../components/core/Navbar.astro";
 import "../styles/root.css";
-const { content } = Astro.props;
+const { title, meta } = Astro.props as MetaProps;
 ---
 
 <html lang="en">
   <head>
-    <MetaTags content={content} />
+    <MetaTags title={title} meta={meta} />
   </head>
   <body>
     <Navbar />

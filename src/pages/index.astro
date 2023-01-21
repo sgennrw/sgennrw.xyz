@@ -10,7 +10,14 @@ import SocialLink from "../components/SocialLink.astro";
 const PAGE_TITLE = "sgennrw";
 ---
 
-<MainLayout content={{ title: PAGE_TITLE }}>
+<MainLayout
+  title={PAGE_TITLE}
+  meta={{
+    title: "Software Engineer who know nothing 🤓",
+    description:
+      "Hi, there! I'm Salisa Cheawcharnthong, a Software Engineer based in Bangkok, Thailand.",
+  }}
+>
   <div
     class="grid h-[calc(100vh-var(--navbar-height))] place-items-center content-center px-[var(--container-px)] pb-[var(--navbar-height)]"
   >

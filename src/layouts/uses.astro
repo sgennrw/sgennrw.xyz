@@ -1,10 +1,12 @@
 ---
 import MainLayout from "./main.astro";
 
-const { content } = Astro.props;
+const {
+  content: { title, description },
+} = Astro.props;
 ---
 
-<MainLayout content={content}>
+<MainLayout title={title} meta={{ description }}>
   <slot />
 </MainLayout>
 

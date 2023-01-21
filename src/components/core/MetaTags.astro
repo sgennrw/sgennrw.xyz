@@ -4,18 +4,42 @@ import { config } from "../../config";
 const { analyticId } = config;
 
 export interface Props {
-  content: {
-    title: string;
+  title: string;
+  meta: {
+    title?: string;
+    description: string;
   };
 }
 
-const { content } = Astro.props as Props;
+const { title, meta } = Astro.props as Props;
+const metaTitle = "Salisa C | " + (meta.title || title.toLocaleUpperCase());
+const { description } = meta;
+
+const image = Astro.site + "ogImage.png";
 ---
 
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 
-<title>salisa c | {content.title}</title>
+<title>salisa c | {title}</title>
+<meta name="description" content={description} />
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content={metaTitle} />
+<meta itemprop="description" content={description} />
+<meta itemprop="image" content={image} />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={metaTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={metaTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
 
 {analyticId && <AnalyticTag id={analyticId} />}
