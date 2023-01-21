@@ -7,6 +7,9 @@ module.exports = {
 				lato: ['Lato', 'sans-serif'],
         mono: ['Roboto Mono', "monospace"],
       },
+      screens: {
+        'xs': '320px',
+      },
     },
   },
   plugins: [],

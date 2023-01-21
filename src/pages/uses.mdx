@@ -1,11 +1,21 @@
 ---
-title: "uses"
-description: ""
-layout: ../layouts/uses.astro
+meta:
+  {
+    title: "uses",
+    description: "A List of things that I use on a regular basis.",
+  }
+layout: ../layouts/main.astro
 ---
+
+import FancyLink from "../components/FancyLink.astro";
+export const components = {
+  a: FancyLink,
+  h2: (props) => <h2 {...props} class="mt-4" />,
+};
 
 <div class="grid max-w-xl mx-auto mt-10 mb-20 px-[var(--container-px)]">
 # /uses
+> {frontmatter.meta.description} inspired by [uses.tech](https://uses.tech/)
 
 ## 👩‍💻 Coding
 

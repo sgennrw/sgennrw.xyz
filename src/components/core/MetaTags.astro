@@ -4,16 +4,16 @@ import { config } from "../../config";
 const { analyticId } = config;
 
 export interface Props {
-  title: string;
+  title?: string;
   meta: {
-    title?: string;
+    title: string;
     description: string;
   };
 }
 
-const { title, meta } = Astro.props as Props;
-const metaTitle = "Salisa C | " + (meta.title || title.toLocaleUpperCase());
+const { meta, title = meta.title } = Astro.props as Props;
 const { description } = meta;
+const metaTitle = "Salisa C | " + meta.title;
 
 const image = Astro.site + "ogImage.png";
 ---

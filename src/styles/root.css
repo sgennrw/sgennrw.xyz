@@ -20,7 +20,7 @@
 
 @layer base {
   body {
-    @apply font-inter;
+    @apply min-w-[theme('screens.xs')] font-inter;
   }
   h1 {
     @apply py-3 text-5xl font-semibold;
@@ -33,6 +33,9 @@
   }
   li {
     @apply py-1 pl-2 text-gray-400;
+  }
+  blockquote {
+    @apply border-l-2 border-l-sky-400 p-4 italic text-gray-400;
   }
   code {
     @apply bg-gray-100 px-1 text-sm text-gray-500;
@@ -49,12 +52,6 @@
 }
 
 @layer utilities {
-  .link-fancy {
-    @apply border-sky-600 bg-gradient-to-r
-    from-sky-500 to-indigo-500 bg-clip-text
-      font-medium text-sky-500 hover:border-b-2 hover:text-transparent;
-  }
-
   .text-rainbow {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(

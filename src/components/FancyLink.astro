@@ -1,0 +1,12 @@
+---
+const { props } = Astro;
+---
+
+<a
+  {...props}
+  target="_blank"
+  rel="noreferrer noopener"
+  class="link-fancy border-sky-600 bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text font-medium text-sky-500 hover:border-b-2 hover:text-transparent"
+>
+  <slot />
+</a>

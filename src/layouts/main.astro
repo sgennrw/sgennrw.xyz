@@ -4,12 +4,12 @@ import MetaTags, {
 } from "../components/core/MetaTags.astro";
 import Navbar from "../components/core/Navbar.astro";
 import "../styles/root.css";
-const { title, meta } = Astro.props as MetaProps;
+const props = (Astro.props.frontmatter || Astro.props) as MetaProps;
 ---
 
 <html lang="en">
   <head>
-    <MetaTags title={title} meta={meta} />
+    <MetaTags {...props} />
   </head>
   <body>
     <Navbar />
