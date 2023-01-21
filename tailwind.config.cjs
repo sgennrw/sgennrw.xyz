@@ -3,12 +3,32 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-				inter: ['Inter', 'sans-serif'],
-				lato: ['Lato', 'sans-serif'],
-        mono: ['Roboto Mono', "monospace"],
+        inter: ["Inter", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+        mono: ["Roboto Mono", "monospace"],
       },
       screens: {
-        'xs': '320px',
+        xs: "320px",
+      },
+      keyframes: {
+        fancyLinkText: {
+          from: {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+          to: {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+        },
+        fancyLinkBorder: {
+          from: {
+            "clip-path": "inset(0 0 0 100%)",
+          },
+          to: {
+            "clip-path": "inset(0 0 0 0)",
+          },
+        },
       },
     },
   },
