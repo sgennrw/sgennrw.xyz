@@ -11,17 +11,21 @@ const PAGE_TITLE = "sgennrw";
 ---
 
 <MainLayout content={{ title: PAGE_TITLE }}>
-  <div class="grid h-[calc(100vh-4rem)] place-items-center content-center px-4">
+  <div
+    class="grid h-[calc(100vh-var(--navbar-height))] place-items-center content-center px-[var(--container-px)] pb-[var(--navbar-height)]"
+  >
     <Card>
       <div
-        class="m-4 h-52 w-auto flex-none overflow-hidden bg-[url('/assets/profile-img.jpg')] bg-[length:250px_250px] bg-center bg-no-repeat text-center lg:h-auto lg:w-48 lg:bg-[length:200px_200px]"
+        class="m-4 h-52 w-auto flex-none overflow-hidden bg-white bg-[url('/assets/profile-img.png')] bg-[length:180px_180px] bg-center bg-no-repeat text-center lg:h-auto lg:w-48 lg:bg-[length:150px_150px]"
         title={PAGE_TITLE}
       >
       </div>
-      <div class="flex flex-col justify-between p-4 leading-normal">
+      <div
+        class="flex flex-col justify-between p-4 pt-0 leading-normal lg:pt-4"
+      >
         <div class="mb-5">
           <p class="flex items-center text-base text-gray-400">
-            👩‍💻✏️📚☕🌙🐱🏳️‍🌈
+            👩‍💻📚🎨✏️☕🌃🌙🐱🇹🇭🏳️‍🌈
           </p>
           <div class="mb-2 text-xl font-bold text-gray-900">
             Salisa Cheawcharnthong

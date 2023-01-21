@@ -1,13 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lato&family=Roboto+Mono&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --navbar-height: 4rem;
+  --container-px: 1rem;
+}
 
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
+::selection {
+  @apply bg-sky-300 text-black;
+}
+
 @layer base {
+  body {
+    @apply font-inter;
+  }
   h1 {
     @apply py-3 text-5xl font-semibold;
   }
@@ -24,7 +38,7 @@
     @apply bg-gray-100 px-1 text-sm text-gray-500;
   }
   a:not(.link-fancy) {
-    @apply text-gray-400 underline-offset-4 hover:text-sky-500 hover:underline;
+    @apply font-lato text-gray-400 underline-offset-4 hover:text-sky-500 hover:underline;
   }
 }
 

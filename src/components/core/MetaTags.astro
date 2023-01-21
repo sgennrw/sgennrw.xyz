@@ -1,5 +1,5 @@
 ---
-import AnalyticMeta from "./AnalyticMeta.astro";
+import AnalyticTag from "./AnalyticTag.astro";
 import { config } from "../../config";
 const { analyticId } = config;
 
@@ -18,4 +18,4 @@ const { content } = Astro.props as Props;
 
 <title>salisa c | {content.title}</title>
 
-{analyticId && <AnalyticMeta id={analyticId} />}
+{analyticId && <AnalyticTag id={analyticId} />}
