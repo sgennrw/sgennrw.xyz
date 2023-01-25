@@ -21,14 +21,6 @@ module.exports = {
             "background-position": "left center",
           },
         },
-        fancyLinkBorder: {
-          from: {
-            "clip-path": "inset(0 0 0 100%)",
-          },
-          to: {
-            "clip-path": "inset(0 0 0 0)",
-          },
-        },
       },
     },
   },

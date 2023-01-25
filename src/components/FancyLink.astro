@@ -12,15 +12,12 @@ const { props } = Astro;
       font-medium text-sky-500
       hover:animate-[fancyLinkText_1s_ease_forwards] hover:text-transparent;
     /** for supporting .link-fancy::after */
-    @apply inline-flex w-fit flex-col;
+    @apply relative inline-flex w-fit flex-col hover:after:w-full;
   }
 
   .link-fancy::after {
     content: "";
-    @apply h-[2px] w-0 bg-gradient-to-r from-sky-500 to-indigo-500;
-  }
-
-  .link-fancy:hover::after {
-    @apply w-full animate-[fancyLinkBorder_1s_ease_forwards];
+    transition: all 0.5s ease-in-out;
+    @apply absolute right-0 bottom-0 h-[2px] w-0 bg-gradient-to-r from-sky-500 to-indigo-500;
   }
 </style>
